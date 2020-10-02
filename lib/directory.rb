@@ -1,3 +1,3 @@
-class Quote
+class Directory
     
 end 
