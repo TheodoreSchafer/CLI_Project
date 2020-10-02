@@ -2,12 +2,13 @@ class CLI
 
     def start 
         puts ""
-        puts "Welcome to Quote!"
+        puts "Welcome to Ghibli Directory!"
         puts ""
-        puts "Would you like an amazing quote?"
+        puts "Which movie would you like information on?"
         puts ""
         quote = gets.chomp.downcase
-        binding.pry
+      binding.pry
+      
 
     end 
 end 
