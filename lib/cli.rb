@@ -6,11 +6,23 @@ class CLI
         puts ""
         puts "Which Studio Ghibli film would you like information on?"
         puts ""
-        @film = gets.strip.downcase
+        
+        films = Film.all
+        print_films(films)
         puts ""
+
+        
         API.fetch_film(@film)
-       
+        @film = gets.strip.downcase
+      
+        end 
 
-
+    def print_films(films)
+        
+        films.each_with_index do |f, i|
+            puts "#{i}. #{f.name}"
+            binding.pry
+        end 
+        
     end 
 end 
