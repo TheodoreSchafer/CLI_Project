@@ -52,14 +52,15 @@ class CLI
     def print_film_info(film)
         puts ""
         puts "#{film.name}"
-        puts ""
+        puts "----------------------------"
         puts "Description - #{film.description}"
-        puts ""
+        puts "----------------------------"
         puts "Director - #{film.director}"
-        puts ""
+        puts "----------------------------"
         puts "Producer - #{film.producer}"
-        puts ""
+        puts "----------------------------"
         puts "Year of Release - #{film.release_date}"
+        puts "----------------------------"
     end 
 
    
