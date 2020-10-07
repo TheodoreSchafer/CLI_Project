@@ -17,7 +17,7 @@ class CLI
                 print_films(films)
                 puts "Enter corresponding number to the movie you would like to learn about."
                 puts ""
-            elsif
+            elsif film.to_i > 0 && film.to_i <= Film.all.length
             f = Film.all[film.to_i - 1]
             print_film_info(f)
             puts ""
@@ -25,6 +25,10 @@ class CLI
             puts ""
             puts "If you would like to exit, type 'exit'"
             puts ""
+            else
+                puts ""
+                puts "Invalid input, please try again"
+                puts ""
             end 
         film = gets.strip.downcase
         end
