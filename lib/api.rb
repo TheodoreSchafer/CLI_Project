@@ -5,18 +5,16 @@ class API
          uri = URI(url)
          response = Net::HTTP.get(uri)
          films = JSON.parse(response)
+         
+         
             films.each do |f|
-                Film.new(f["title"])
-            
-        end
-    end 
-
-    def self.fetch_film_info(name)
-        url = "https://ghibliapi.herokuapp.com/films/"
-        uri = URI(url)
-        response = Net::HTTP.get(url)
-        info = JSON.parse(response)
-        binding.pry
+                Film.new(name: f["title"], description: f["description"], director: f["director"], release_date: f["release_date"], producer: f["producer"])
+                
+            end 
         
     end 
-end 
+
+
+  
+end
+

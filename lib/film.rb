@@ -1,11 +1,13 @@
 class Film
-    attr_accessor :name, :description, :director, :producer, :release_date, :rt_score
+    attr_accessor :name, :description, :director, :producer, :release_date
     @@all = []
 
-    def initialize(name)
+    def initialize(name:, description:, director:, release_date:, producer:)
         @name = name
         @description = description
         @director = director 
+        @release_date = release_date
+        @producer = producer
         @@all << self
     end 
 
@@ -13,8 +15,4 @@ class Film
         @@all
     end 
 
-    def self.find_by_name(name)
-        @@all.select {|f| f.name == name}
-    end 
-    
 end 
