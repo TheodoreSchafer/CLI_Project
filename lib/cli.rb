@@ -2,7 +2,7 @@ class CLI
 
     def start 
         puts ""
-        puts "Welcome to Ghibli Directory!"
+        puts "Hello!"
         puts ""
         puts "Which Studio Ghibli film would you like information on?"
         puts ""
@@ -15,7 +15,7 @@ class CLI
         while film != 'exit' do
             if film == 'list'
                 print_films(films)
-                puts "Enter corresponding number to the movie you would like to learn about."
+                puts "Enter the corresponding number to the movie you would like to learn about."
                 puts ""
             elsif film.to_i > 0 && film.to_i <= Film.all.length
             f = Film.all[film.to_i - 1]
@@ -27,7 +27,7 @@ class CLI
             puts ""
             else
                 puts ""
-                puts "Invalid input, please try again"
+                puts "Invalid input, please try again. If you would like to print the list again, type 'list'"
                 puts ""
             end 
         film = gets.strip.downcase
